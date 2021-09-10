@@ -7,6 +7,6 @@ import 'core-js/features/set';
 import 'raf/polyfill';
 import 'whatwg-fetch';
 
-import App from './components/app';
+import App from './components/app/app';
 
 ReactDOM.render(<App />, document.getElementById('app-root'));
