@@ -22,7 +22,18 @@ button {
 .game-area {
 	border: 5px solid black;
 	border-radius: 5px;
+	display: flex;
+	flex-direction: column;
 	width: calc(50vh + 5px);
+}
+
+.grid-row {
+	display: flex;
+	flex: 1 0 0px;
+}
+
+.grid-row > div {
+	flex: 1 0 0px;
 }
 
 .game-info {

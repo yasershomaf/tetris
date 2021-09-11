@@ -1,12 +1,27 @@
 import React, { useState } from 'react';
 
+import IColor from '../../services/types';
+
+import Box from '../box/box';
+
 import './app.css';
 
 const App = () => {
 	const [gameStatus, setGameStatus] = useState<'started' | 'paused' | 'stopped'>('stopped');
 
+	const [grid, setGrid] = useState<(IColor | null)[][]>(Array.from(
+		{length: 20}, row => Array.from({length: 10}, boxColor => null)
+	));
+
 	return <div className="container">
-		<div className="game-area"></div>
+		<div className="game-area">
+			{grid.map((row, rowIndex) => <div key={rowIndex} className="grid-row">
+				{row.map((boxColor, boxIndex) => boxColor ? <Box
+					key={boxIndex}
+					color={boxColor}
+				/> : <div key={boxIndex}></div>)}
+			</div>)}
+		</div>
 
 		<div className="game-info">
 			<div className="next-shape"></div>
