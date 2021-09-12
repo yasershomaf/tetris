@@ -1,0 +1,13 @@
+.shape-container {
+	position: absolute;
+	transition: transform 200ms;
+}
+
+.shape-row {
+	display: flex;
+}
+
+.shape-row > div {
+	height: calc(5vh - 0.5px);
+	width: calc(5vh - 0.5px);
+}

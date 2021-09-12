@@ -10,30 +10,26 @@ button {
 	cursor: pointer;
 }
 
-/* box width: calc(5vh - 0.5px) */
-
 .container {
 	display: flex;
 	height: 100vh;
 	margin: 0 auto;;
-	width: calc(80vh + 22px);
+	width: calc(85vh + 21.5px);
 }
 
 .game-area {
 	border: 5px solid black;
 	border-radius: 5px;
-	display: flex;
-	flex-direction: column;
 	width: calc(50vh + 5px);
 }
 
 .grid-row {
 	display: flex;
-	flex: 1 0 0px;
 }
 
 .grid-row > div {
-	flex: 1 0 0px;
+	height: calc(5vh - 0.5px);
+	width: calc(5vh - 0.5px);
 }
 
 .game-info {
@@ -44,8 +40,9 @@ button {
 .next-shape {
 	border: 5px solid black;
 	border-radius: 5px;
-	height: calc(30vh + 7px);
+	height: calc(35vh + 6.5px);
 	margin-bottom: 10px;
+	position: relative;
 }
 
 .game-scores {

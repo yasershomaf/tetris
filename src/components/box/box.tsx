@@ -4,7 +4,7 @@ import IColor from '../../services/types';
 
 import './box.css';
 
-const Box: FC<{color: IColor, rotate?: number}> = ({color, rotate= 0}) => {
+const Box: FC<{color: IColor, rotation?: number}> = ({color, rotation= 0}) => {
 	const {red, green, blue} = color;
 
 	const darkColor = `rgb(${Math.round(red / 2)}, ${
@@ -17,11 +17,11 @@ const Box: FC<{color: IColor, rotate?: number}> = ({color, rotate= 0}) => {
 
 	return <div className="box" style={{
 		backgroundColor: `rgb(${red}, ${green}, ${blue})`,
-		borderColor: rotate === 90 ? `${darkColor} ${darkColor} ${lightColor} ${
+		borderColor: rotation === 90 ? `${darkColor} ${darkColor} ${lightColor} ${
 			lightColor
-		}` : rotate === 180 ? `${darkColor} ${lightColor} ${lightColor} ${
+		}` : rotation === 180 ? `${darkColor} ${lightColor} ${lightColor} ${
 			darkColor
-		}` : rotate === 270 ? `${lightColor} ${lightColor} ${darkColor} ${
+		}` : rotation === 270 ? `${lightColor} ${lightColor} ${darkColor} ${
 			darkColor
 		}` : `${lightColor} ${darkColor} ${darkColor} ${lightColor}`
 	}} />;
