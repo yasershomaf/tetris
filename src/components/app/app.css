@@ -20,6 +20,8 @@ button {
 .game-area {
 	border: 5px solid black;
 	border-radius: 5px;
+	overflow: hidden;
+	position: relative;
 	width: calc(50vh + 5px);
 }
 
@@ -43,6 +45,14 @@ button {
 	height: calc(35vh + 6.5px);
 	margin-bottom: 10px;
 	position: relative;
+}
+
+.next-shape .shape-container {
+	transition: none;
+}
+
+.next-shape .box {
+	transition: none;
 }
 
 .game-scores {
